@@ -1,0 +1,174 @@
+$text-color: #1d1d1f
+$text-color-secondary: #6e6e73
+$link-blue: #007aff
+$shadow-color: rgba(0, 0, 0, 0.1)
+$base-radius: 8px
+
+header
+  display: flex
+  flex-direction: row
+  align-items: flex-end
+  background-color: rgba(255, 255, 255, 0.9)
+  backdrop-filter: blur(10px)
+  -webkit-backdrop-filter: blur(10px)
+  padding: 1rem 2rem
+  border-bottom: 1px solid transparent
+  box-shadow: 0 0 10px 0 $shadow-color
+  flex-shrink: 0
+  position: sticky
+  top: 0
+  z-index: 10
+
+  nav ul
+    list-style: none
+    padding: 0
+    margin: 0
+    display: flex
+    gap: 1.5rem
+
+  nav ul li a
+    text-decoration: none
+    color: $text-color
+    font-weight: 400
+    font-size: 0.95rem
+
+    &:hover
+      text-decoration: underline
+
+main
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  max-width: 980px
+  margin: 3rem auto
+  padding: 0 1.5rem
+  flex-grow: 1
+
+  h1
+    margin-bottom: 0
+    margin-top: 0
+    color: $text-color
+    font-size: 2.5rem
+    font-weight: 600
+
+  h2
+    margin-top: 0
+    margin-bottom: 0.5rem
+    color: $text-color
+    font-size: 1.5rem
+    font-weight: 600
+
+  h3
+    margin-top: 0rem
+    margin-bottom: 0.5rem
+    color: $text-color
+    font-size: 1.4rem
+    font-weight: 600
+    border-bottom: none
+    padding-bottom: 0
+    text-align: left
+
+  section
+    background-color: transparent
+    margin-top: 0.5rem
+    margin-bottom: 1rem
+
+    p
+      line-height: 1.7
+      color: $text-color-secondary
+      margin: 0.5rem 0
+
+    a
+      color: $link-blue
+      text-decoration: none
+
+      &:hover
+        text-decoration: underline
+
+    .project-card
+      border: none
+      background-color: white
+      padding: 1.5rem
+      margin-bottom: 1.5rem
+      border-radius: $base-radius
+      box-shadow: 0 0 10px 0 $shadow-color
+
+      &:hover
+        box-shadow: 0 0 20px 0 $shadow-color
+        background-color: white
+        backdrop-filter: blur(10px)
+        -webkit-backdrop-filter: blur(10px)
+
+      *:last-child
+        margin-bottom: 0
+
+      h4
+        margin: 0 0 0.5rem 0
+        color: $text-color
+        font-size: 1.1rem
+        font-weight: 600
+
+      p
+        margin-bottom: 0.75rem
+        color: $text-color-secondary
+        font-size: 0.9rem
+        line-height: 1.6
+
+        & em
+          color: $text-color-secondary
+          font-style: normal
+          font-size: 0.85rem
+
+      a
+        display: inline-block
+        margin-top: 0.5rem
+        text-decoration: none
+        color: $link-blue
+        background-color: transparent
+        font-weight: 400
+        font-size: 0.9rem
+        padding: 0.4rem 0.9rem
+        border: none
+        border-radius: $base-radius - 2px
+        transition: background-color 0.2s ease, border-color 0.2s ease
+
+        &:hover
+          background-color: #e5f2ff
+          border-color: $link-blue
+          color: $link-blue
+          text-decoration: none
+
+    .project-card:last-child
+      margin-bottom: 0
+
+footer
+  background-color: transparent
+  padding: 1.5rem 2rem
+  text-align: center
+  color: $text-color-secondary
+  font-size: 0.85rem
+  flex-shrink: 0
+
+  a
+    color: $text-color
+    text-decoration: none
+
+    &:visited
+      color: $text-color
+
+  p
+    margin: 0
+
+body
+  min-height: 100%
+  display: flex
+  flex-direction: column
+  margin: 0
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+  line-height: 1.6
+  background-color: #f5f5f7
+  color: $text-color
+  font-weight: 400
+
+html
+  height: 100%
